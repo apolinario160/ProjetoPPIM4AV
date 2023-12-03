@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de usuario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <form action='/cadastrarUsuario' method='POST' class="row g-3 needs-validation" novalidate>
+      <fieldset class="border p-2">
+        <legend class="mb-3">Cadastro de usúario</legend>
+
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="col-md-4">
+          <label for="sobrenome" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+        </div>
+        <div class="col-md-4">
+          <label for="nomeUsuario" class="form-label">Nome do usuario</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario"
+              aria-describedby="inputGroupPrepend" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="cidade" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" required>
+        </div>
+        <div class="col-md-3">
+          <label for="uf" class="form-label">UF</label>
+          <select class="form-select" id="uf" name="uf" required>
+            <option selected disabled value="">Escolha um Estado...</option>
+            <option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="cep" class="form-label">CEP</label>
+          <input type="text" class="form-control" id="cep" name="cep" required>
+        </div>
+        <div class="col-12 mt-3">
+          <button class="btn btn-primary" type="submit">Cadastrar</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

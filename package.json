@@ -1,0 +1,32 @@
+{
+  "name": "projetoppim3av",
+  "version": "1.0.0",
+  "description": "Projeto PPI aula ao vivo 3",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apolinario160/ProjetoPPIM3AV.git"
+  },
+  "keywords": [
+    "POST",
+    "HTTP",
+    "validação",
+    "servidor"
+  ],
+  "author": "Tiago Apolinario Gomes Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apolinario160/ProjetoPPIM3AV/issues"
+  },
+  "homepage": "https://github.com/apolinario160/ProjetoPPIM3AV#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}
