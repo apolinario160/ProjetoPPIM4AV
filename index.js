@@ -354,6 +354,20 @@ app.get('/batepapo', autenticar, (requisicao, resposta) => {
 });
 
 
+// Rota para receber e armazenar nova mensagem
+app.post('/enviarMensagem', autenticar, (requisicao, resposta) => {
+    const novaMensagem = {
+        usuario: requisicao.body.usuario,
+        texto: requisicao.body.mensagem,
+        data: new Date().toLocaleString() // Insere automaticamente a data e hora
+    };
+
+    // Lógica para adicionar a nova mensagem ao sistema
+    // Adicione a 'novaMensagem' à lista de mensagens ou à fonte de dados apropriada
+
+    // Redireciona de volta para a página de bate-papo
+    resposta.redirect('/batepapo');
+});
 
 
 //Rota para processar o cadastro de usuário endpoint ='/cadastraUsuario'
