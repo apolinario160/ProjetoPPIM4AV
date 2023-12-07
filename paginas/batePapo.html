@@ -11,29 +11,42 @@
 
 <body>
     <div class="container">
-      <form action="/batePapo" method="POST" class="row g-3 needs-validation" novalidate>
-        <fieldset class="border p-2">
-          <legend class="mb-3">Sala de Bate-Papo</legend>
-  
-          <div class="col-md-4">
-            <label for="usuario">Usuário:</label>
-            <select id="usuario" name="usuario">
-            
-            </select>
-        <br>
-          </div>
-  
-          <div class="col-md-4">
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem"></textarea>
-          </div>
-  
-          <div class="col-12 mt-3">
-            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
-          </div>
-        </fieldset>
-      </form>
+        <form action="/enviarMensagem" method="POST" class="row g-3 needs-validation" novalidate>
+            <fieldset class="border p-2">
+                <legend class="mb-3">Sala de Bate-Papo</legend>
+
+                <div id="mensagens" class="col-md-12">
+                    <h2>Mensagens:</h2>
+                    <ul>
+                        <% mensagens.forEach(function(mensagem) { %>
+                            <li><strong><%= mensagem.usuario %>:</strong> <%= mensagem.texto %> - <%= mensagem.data %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="usuario">Usuário:</label>
+                    <select id="usuario" name="usuario" class="form-select">
+                        <% usuarios.forEach(function(usuario) { %>
+                            <option value="<%= usuario.id %>"><%= usuario.nome %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+                <div class="col-md-8">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" class="form-control"></textarea>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
+</body>
+  
+  
   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

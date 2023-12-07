@@ -344,6 +344,15 @@ app.post('/login', (requisicao, resposta) => {
     }
 })
 
+// Rota para exibir o bate-papo
+app.get('/batepapo', autenticar, (requisicao, resposta) => {
+    // Lógica para buscar todas as mensagens já postadas no sistema
+    const mensagens = []; // Aqui você deve buscar as mensagens do seu sistema
+
+    // Renderiza a página de bate-papo
+    resposta.render('batepapo', { mensagens: mensagens, usuarios: listaUsuarios });
+});
+
 
 
 
